@@ -1,16 +1,50 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# AppDolarHoy
 
-Currently, two official plugins are available:
+AppDolarHoy es una aplicación desarrollada en React que permite consultar la cotización actual del dólar en Argentina, facilitando la conversión de divisas y mostrando información relevante de manera clara y actualizada.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades principales
 
-## React Compiler
+- **Consulta de cotización del dólar**: Obtiene y muestra la cotización actualizada del dólar en Argentina.
+- **Conversión de divisas**: Permite convertir montos entre pesos argentinos y dólares estadounidenses.
+- **Formato de fechas**: Presenta la fecha de la última actualización en un formato legible y amigable.
+- **Interfaz intuitiva**: Diseño simple y moderno, optimizado para una experiencia de usuario fluida.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Estructura del proyecto
 
-## Expanding the ESLint configuration
+- `src/App.jsx`: Componente principal de la aplicación.
+- `src/pages/Home.jsx`: Página principal donde se visualiza la cotización y se realizan las conversiones.
+- `src/hooks/useCotizacion.js`: Hook personalizado para obtener la cotización del dólar desde una API externa.
+- `src/utils/convertCurrency.js`: Función utilitaria para realizar la conversión de monedas.
+- `src/utils/formatDate.js`: Función utilitaria para formatear fechas.
+- `src/App.css`: Estilos principales de la aplicación.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Implementaciones destacadas
+
+- **React Hooks**: Uso de hooks personalizados para la gestión de datos y lógica de negocio.
+- **Vite**: Configuración con Vite para un desarrollo rápido y eficiente.
+- **ESLint**: Configuración de ESLint para mantener buenas prácticas y calidad de código.
+- **Despliegue en Vercel**: Preparado para despliegue rápido y sencillo en Vercel.
+
+## Instalación y uso
+
+1. Clona el repositorio:
+	```bash
+	git clone <url-del-repositorio>
+	```
+2. Instala las dependencias:
+	```bash
+	npm install
+	```
+3. Inicia la aplicación en modo desarrollo:
+	```bash
+	npm run dev
+	```
+4. Accede a la app en [http://localhost:5173](http://localhost:5173)
+
+## Créditos
+
+Desarrollado por Mauro para la práctica de programación en React.
+
+---
+
