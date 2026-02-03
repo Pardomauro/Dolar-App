@@ -1,5 +1,5 @@
 
-# 💵AppDolarHoy💵
+# 💵Dolar App💵
 
 📱 AppDolarHoy es una aplicación desarrollada en React que permite consultar la cotización actual del dólar en Argentina, facilitando la conversión de divisas y mostrando información relevante de manera clara y actualizada.
 
