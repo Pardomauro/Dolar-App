@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest';
 
 // Algunas versiones de Node/ICU usan espacios especiales (U+00A0 / U+202F)
 // antes de "a. m." / "p. m.". Los normalizamos para que el test no dependa de eso.
-const normalizar = (texto) => texto.replace(/[  ]/g, ' ');
+const normalizar = (texto) => texto.replace(/[\s\u00A0\u202F]/g, ' ');
 
 describe('formatDate', () => {
     describe('valores vacíos', () => {
