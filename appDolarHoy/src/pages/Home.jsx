@@ -48,7 +48,7 @@ function Home() {
                     <option value="contadoconliqui">Contado con Liquidación</option>
                     <option value="tarjeta">Tarjeta</option>
                     <option value="mayorista">Mayorista</option>
-                    <option value="cripto">Cripto</option>
+                    <option value="cripto">Criptomonedas</option>
                 </select>
 
                 <div className="min-h-[110px] flex flex-col justify-center items-center w-full">

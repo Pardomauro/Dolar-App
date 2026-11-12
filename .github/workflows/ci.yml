@@ -37,6 +37,9 @@ jobs:
             - name: Se ejecuta el linter
               run: npm run lint
             
+            - name: Se ejecutan los tests
+              run: npm run test
+            
 
             - name: Se construye la aplicacion
               run: npm run build
