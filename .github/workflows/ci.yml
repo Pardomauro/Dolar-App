@@ -39,19 +39,10 @@ jobs:
             
             - name: Se ejecutan los tests
               run: npm run test
-            
-            - name: Diagnóstico (TEMPORAL)
-              run: echo "VITE_API_URL=[$VITE_API_URL]"
-              env:
-                VITE_API_URL: ${{ vars.VITE_API_URL }}
 
             - name: Se construye la aplicacion
               run: npm run build
               env: 
                 VITE_API_URL: ${{ vars.VITE_API_URL }}
-
-            - name: Verificar variable en bundle (temporal)
-              run: grep -rl "ejemplo-prueba.com" dist
-
 
 
