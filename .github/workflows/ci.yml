@@ -39,9 +39,10 @@ jobs:
             
             - name: Se ejecutan los tests
               run: npm run test
-            
 
             - name: Se construye la aplicacion
               run: npm run build
+              env: 
+                VITE_API_URL: ${{ vars.VITE_API_URL }}
 
 

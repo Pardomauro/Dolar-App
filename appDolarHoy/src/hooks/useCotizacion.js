@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+const API_URL = import.meta.env.VITE_API_URL ?? 'https://dolarapi.com/v1'
+
 function useCotizacion(casa, moneda) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -31,7 +33,7 @@ function useCotizacion(casa, moneda) {
                 }
 
                 if (casa === "cotizaciones") {
-                    url = `https://dolarapi.com/v1/cotizaciones`;
+                    url = `${API_URL}/cotizaciones`;
                     const res = await fetch(url);
 
                     if (!res.ok) throw new Error('Error en la solicitud');
@@ -40,7 +42,7 @@ function useCotizacion(casa, moneda) {
                     result = arr.find(item => item.moneda === moneda);
 
                 } else {
-                    url = `https://dolarapi.com/v1/dolares/${casa}`;
+                    url = `${API_URL}/dolares/${casa}`;
                     const res = await fetch(url);
 
                     if (!res.ok) throw new Error('Error en la solicitud');
