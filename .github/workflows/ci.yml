@@ -43,5 +43,11 @@ jobs:
 
             - name: Se construye la aplicacion
               run: npm run build
+              env: 
+                VITE_API_URL: ${{ vars.VITE_API_URL }}
+
+            - name: Verificar variable en bundle (temporal)
+              run: grep -rl "ejemplo-prueba.com" dist
+
 
 
