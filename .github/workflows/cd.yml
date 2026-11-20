@@ -2,7 +2,7 @@ name: Despliegue continuo
 
 on: 
     push:
-        branches: [ master, ci/environments ] 
+        branches: [ master ] 
 
 permissions:
     contents: read
