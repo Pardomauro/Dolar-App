@@ -1,0 +1,27 @@
+name: Despliegue continuo
+
+on: 
+    push:
+        branches: [ master ] 
+
+permissions:
+    contents: read
+
+jobs:
+    deploy-staging:
+        runs-on: ubuntu-latest
+        environment: staging
+        steps:
+            - name: Simular despliegue en staging
+              run: |
+                echo "Desplegando a Staging con API: ${{ vars.VITE_API_URL }} "
+            
+    deploy-production:
+        needs: deploy-staging
+        runs-on: ubuntu-latest
+        environment: production
+        steps:
+            - name: Simular despliegue en staging
+              run: |
+                echo "Desplegando a Producción con API: ${{ vars.VITE_API_URL }} "
+
